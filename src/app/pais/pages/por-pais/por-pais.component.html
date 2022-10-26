@@ -1,1 +1,18 @@
-<p>por-pais works!</p>
+<hr>
+<div class="row">
+    <div class="col">
+        <app-pais-input
+            (onEnter)="buscar($event)">
+        </app-pais-input>
+    </div>
+</div>
+<hr>
+
+<div class="alert alert-danger" *ngIf="hayError">
+    No se encontró nada con el termino {{termino}}
+</div>
+<div class="row">
+    <div class="col">
+        <app-pais-tabla [paises]="getPaises"></app-pais-tabla>
+    </div>
+</div>
